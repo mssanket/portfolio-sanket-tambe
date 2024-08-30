@@ -7,6 +7,9 @@ Authors
 Deployment
 To deploy this project run
 
-  npm run deploy
+
+npm run deploy
+
+
 🚀 About Me
 I'm a full stack developer...
