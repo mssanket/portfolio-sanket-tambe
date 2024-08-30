@@ -6,13 +6,14 @@ import About from './components/About'
 import Services from './components/Services'
 import Expertise from './components/Expertise'
 import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Header />
+      <Contact />
       <Banner />
       <About />
       <Services />
