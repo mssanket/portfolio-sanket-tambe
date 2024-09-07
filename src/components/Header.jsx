@@ -38,7 +38,7 @@ const Header = () => {
 
     return (
         <>
-            <div className='h-20 border main flex justify-between items-center px-16 bg-gray-100'>
+            <div className='h-20 border main justify-between px-16 bg-gray-100 flex flex-col md:flex-row items-center text-center md:text-left'>
                 <div>
                     <h1 className='text-2xl font-bold'>{brandName}</h1>
                 </div>

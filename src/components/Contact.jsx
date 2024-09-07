@@ -1,6 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 
 const Contact = () => {
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData({
+                [e.target.name]: e.target.value
+            })
+        })
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            axios.post("", formData)
+                .then(response => {
+                    console.log(response.data);
+                    alert("form submitted successfully");
+                })
+                .catch(error => {
+                    console.error("There was an error submitting the form!", error);
+
+                })
+        }
+    }
+
     return (
         <>
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
