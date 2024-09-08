@@ -14,10 +14,16 @@ function App() {
   return (
     <>
       <Header />
+      <div id='home'></div>
       <Banner />
+      <div id='about'></div>
       <About />
+      <div id='skills'></div>
       <Services />
+      <div id='portfolio'></div>
       <Expertise />
+      <div id='contact'></div>
+      <Contact />
       <Footer />
     </>
   )

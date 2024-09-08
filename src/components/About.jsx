@@ -20,22 +20,25 @@ const About = () => {
         <>
             <div className='main-container bg-gray-100 py-16'>
                 <h1 className='text-center pb-16 text-5xl font-bold underline'>About Me</h1>
-                <div className='flex items-center'>
+                <div className='flex flex-col lg:flex-row items-center lg:space-x-10'>
+                    {/* Image Section */}
                     <div className='w-full flex justify-center'>
-                        <img className='w-fit rounded-3xl' src={data.image} alt="" />
+                        <img className='w-fit max-w-xs lg:max-w-md rounded-3xl' src={data.image} alt="Banner" />
                     </div>
-                    <div className='w-full  flex justify-center'>
-                        <div className='space-y-5 w-2/3'>
-                            <h1 className='text-5xl  font-semibold'>
+                    {/* Text Section */}
+                    <div className='w-full  flex justify-center mt-10 lg:mt-0'>
+                        <div className='space-y-5 px-4 lg:px-0 lg:w-2/3'>
+                            <h1 className='text-5xl lg:text-5xl font-semibold'>
                                 {data.title}
                             </h1>
-                            <p>
+                            <p className='text-base lg:text-lg'>
                                 {data.desc1}
                             </p>
-                            <p>
+                            <p className='text-base lg:text-lg'>
                                 {data.decs2}
                             </p>
-                            <button className='bg-orange-500 px-3 py-2 text-2xl rounded-full shadow-lg'>
+                            <a href={data.actionButton.link}></a>
+                            <button className='bg-orange-500 px-5 py-2 text-lg lg:text-2xl rounded-full shadow-lg'>
                                 {data.actionButton.title}
                             </button>
                         </div>
