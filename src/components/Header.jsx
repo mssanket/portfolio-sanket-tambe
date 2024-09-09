@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Resume from '../assets/Resume.pdf'
 
 const Header = () => {
 
@@ -31,9 +32,9 @@ const Header = () => {
         },
     ])
 
-    const [actionButton, setactionButton] = useState({
+    const [actionButton] = useState({
         title: "Hire Me",
-        link: "#hire-me",
+        link: Resume,
     })
 
     return (
@@ -53,7 +54,8 @@ const Header = () => {
                     <a href="/contact" className='hover:text-orange-600'>Contact</a> */}
                 </div>
                 <div>
-                    <a href={actionButton.link} className='px-4 py-2 bg-orange-500 shadow rounded-full text-1xl'>{actionButton.title}</a>
+                    {/* Hire Me Button */}
+                    <a href={actionButton.link} download={Resume.pdf} className='px-4 py-2 bg-orange-500 shadow rounded-full text-1xl'>{actionButton.title}</a>
                 </div>
             </div>
         </>
