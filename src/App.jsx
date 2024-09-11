@@ -8,6 +8,8 @@ import Expertise from './components/Expertise'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import Home from './components/Home'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import Licensing from './components/Licensing'
 
 function App() {
 
@@ -22,9 +24,16 @@ function App() {
       <Services />
       <div id='portfolio'></div>
       <Expertise />
+      <div id='privacy-policy'></div>
+      <PrivacyPolicy />
+      <div id='licensing'></div>
+      <Licensing />
       <div id='contact'></div>
       <Contact />
       <Footer />
+
+
+
     </>
   )
 }
