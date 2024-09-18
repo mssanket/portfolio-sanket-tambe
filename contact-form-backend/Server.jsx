@@ -2,9 +2,13 @@ const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const http = require('http');
+const socketIo = require('socket.io');
 
 const app = express();
 const port = 5000;
+const server = http.createServer(app);
+const io = socketIo(server);
 
 // Middleware
 app.use(cors());
@@ -30,8 +34,6 @@ db.connect((err) => {
 app.post('/submit-contact', (req, res) => {
   const { name, email, message } = req.body;
 
-  console.log(req.body);
-  
 
   const sql = 'INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)';
   db.query(sql, [name, email, message], (err, result) => {
@@ -40,6 +42,7 @@ app.post('/submit-contact', (req, res) => {
       res.status(500).send('Failed to submit form');
     } else {
       res.status(200).send('Form submitted successfully');
+      io.emit('newContact', { name, email, message })
     }
   });
 });
