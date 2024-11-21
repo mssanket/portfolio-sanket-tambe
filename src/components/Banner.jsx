@@ -1,5 +1,5 @@
 import bannerImage from '../assets/Sanket 1.png'
-import bannerBackground from '../assets/Banner bg.png'
+import bannerBackground from '../assets/Banner bg.webp'
 import React from 'react';
 import Typed from 'typed.js';
 import { useRef, useEffect } from 'react';

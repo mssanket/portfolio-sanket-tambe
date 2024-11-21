@@ -1,5 +1,5 @@
 import React from 'react'
-import bannerBackground from '../assets/Banner bg.png'
+import bannerBackground from '../assets/Banner bg.webp'
 
 const Expertise = () => {
     return (
